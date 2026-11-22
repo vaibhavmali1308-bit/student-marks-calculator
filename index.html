@@ -1,0 +1,124 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Marks Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Student Marks Calculator</h1>
+        <p>Calculate your academic performance easily</p>
+    </header>
+
+    <main class="container">
+
+        <section class="calculator">
+            <h2>Enter Student Details</h2>
+
+            <form id="marksForm">
+
+                <div class="input-group">
+                    <label for="studentName">Student Name</label>
+                    <input type="text" id="studentName" placeholder="Enter student name" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="rollNumber">Roll Number</label>
+                    <input type="text" id="rollNumber" placeholder="Enter roll number" required>
+                </div>
+
+                <h3>Enter Subject Marks (Out of 100)</h3>
+
+                <div class="marks-grid">
+                    <div class="input-group">
+                        <label for="subject1">Mathematics</label>
+                        <input type="number" id="subject1" min="0" max="100" placeholder="0-100" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="subject2">Physics</label>
+                        <input type="number" id="subject2" min="0" max="100" placeholder="0-100" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="subject3">Chemistry</label>
+                        <input type="number" id="subject3" min="0" max="100" placeholder="0-100" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="subject4">English</label>
+                        <input type="number" id="subject4" min="0" max="100" placeholder="0-100" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="subject5">Computer</label>
+                        <input type="number" id="subject5" min="0" max="100" placeholder="0-100" required>
+                    </div>
+                </div>
+
+                <div class="buttons">
+                    <button type="submit" class="calculate-btn">Calculate Result</button>
+                    <button type="reset" class="reset-btn">Reset</button>
+                </div>
+
+            </form>
+        </section>
+
+        <section class="result" id="result">
+            <h2>Student Result</h2>
+            <p class="empty-message">Your result will appear here after calculation.</p>
+
+            <div id="resultDetails" hidden>
+                <div class="student-info">
+                    <p><strong>Name:</strong> <span id="displayName"></span></p>
+                    <p><strong>Roll Number:</strong> <span id="displayRoll"></span></p>
+                </div>
+
+                <div class="result-grid">
+                    <div class="result-card">
+                        <span>Total Marks</span>
+                        <h3 id="totalMarks">0/500</h3>
+                    </div>
+
+                    <div class="result-card">
+                        <span>Percentage</span>
+                        <h3 id="percentage">0%</h3>
+                    </div>
+
+                    <div class="result-card">
+                        <span>Average</span>
+                        <h3 id="average">0</h3>
+                    </div>
+
+                    <div class="result-card">
+                        <span>Grade</span>
+                        <h3 id="grade">-</h3>
+                    </div>
+                </div>
+
+                <div class="final-status" id="status">
+                    Result Status
+                </div>
+
+                <div class="subject-results">
+                    <h3>Subject-wise Performance</h3>
+                    <div id="subjectDetails"></div>
+                </div>
+
+                <button type="button" class="print-btn" id="printBtn">Print Result</button>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Student Marks Calculator | FWT Mini Project</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

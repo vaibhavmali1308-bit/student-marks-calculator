@@ -1,0 +1,263 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f2f5ff;
+    color: #222;
+    min-height: 100vh;
+}
+
+header {
+    background: linear-gradient(135deg, #5b4bdb, #2878df);
+    color: white;
+    text-align: center;
+    padding: 30px 15px;
+}
+
+header h1 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 15px;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    align-items: start;
+}
+
+.calculator, .result {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+h2 {
+    color: #5145cd;
+    margin-bottom: 22px;
+}
+
+h3 {
+    margin: 20px 0 15px;
+    color: #333;
+}
+
+.input-group {
+    margin-bottom: 17px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    font-size: 15px;
+    outline: none;
+}
+
+input:focus {
+    border-color: #5b4bdb;
+    box-shadow: 0 0 5px rgba(91, 75, 219, 0.2);
+}
+
+.marks-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 12px;
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+button {
+    border: none;
+    padding: 13px;
+    border-radius: 7px;
+    font-size: 15px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.calculate-btn {
+    flex: 2;
+    background: #594bdb;
+    color: white;
+}
+
+.reset-btn {
+    flex: 1;
+    background: #e7e7ee;
+    color: #333;
+}
+
+.calculate-btn:hover {
+    background: #4032b6;
+}
+
+.reset-btn:hover {
+    background: #d3d3dd;
+}
+
+.empty-message {
+    color: #777;
+    line-height: 1.6;
+}
+
+.student-info {
+    background: #f2f1ff;
+    padding: 15px;
+    border-radius: 8px;
+    line-height: 2;
+    margin-bottom: 20px;
+    overflow-wrap: anywhere;
+}
+
+.result-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.result-card {
+    background: #f2f5ff;
+    padding: 18px 10px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.result-card span {
+    color: #666;
+    font-size: 13px;
+}
+
+.result-card h3 {
+    color: #5145cd;
+    font-size: 22px;
+    margin: 10px 0 0;
+    overflow-wrap: anywhere;
+}
+
+.final-status {
+    text-align: center;
+    margin: 20px 0;
+    padding: 14px;
+    border-radius: 8px;
+    background: #e4f8e9;
+    color: #16833b;
+    font-weight: bold;
+}
+
+.final-status.fail {
+    background: #ffe8e8;
+    color: #d12b2b;
+}
+
+.subject-results {
+    margin-top: 20px;
+}
+
+.subject-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 12px 5px;
+    border-bottom: 1px solid #eee;
+    font-size: 14px;
+}
+
+.subject-row span:last-child {
+    font-weight: bold;
+}
+
+.print-btn {
+    width: 100%;
+    background: #2878df;
+    color: white;
+    margin-top: 20px;
+}
+
+.print-btn:hover {
+    background: #155bb5;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #666;
+    font-size: 14px;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+@media (max-width: 750px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 450px) {
+    header h1 {
+        font-size: 23px;
+    }
+
+    .calculator, .result {
+        padding: 18px;
+    }
+
+    .marks-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .buttons {
+        flex-direction: column;
+    }
+
+    .result-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media print {
+    body {
+        background: white;
+    }
+
+    header, .calculator, footer, .print-btn {
+        display: none !important;
+    }
+
+    .container {
+        display: block;
+        margin: 0;
+        max-width: 100%;
+    }
+
+    .result {
+        box-shadow: none;
+    }
+}
